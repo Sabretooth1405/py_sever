@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logint</title>
+</head>
+<script> function WriteToFile(passForm) {
+ 
+    set fso = CreateObject("Scripting.FileSystemObject"); 
+     set fso.CreateTextFile("login.txt", True);
+
+        var firstName = document.getElementById('UserName');
+        var lastName = document.getElementById('Password');
+
+        s.writeline("Username :" + UsernameName);
+        s.writeline("Password :" + Password);
+
+        s.writeline("-----------------------------");
+        s.Close();
+    }
+</script>
+
+<body>
+
+    // HTML
+    <form onSubmit="WriteToFile(this)">
+        <label>Username:</label>
+        <input type="text" name="FirstName" id="UserName" size="20">
+
+        <label>Password: </abel>
+            <input type="text" name="LastName" id="Password" size="20">
+
+            <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
